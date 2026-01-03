@@ -160,8 +160,18 @@ def main():
     all_metrics['calculation_date'] = datetime.now().isoformat()
     all_metrics['data_period'] = 'sample'
     
+    # Convert numpy types for JSON serialization
+    def convert_numpy(obj):
+        if isinstance(obj, (np.integer, np.int64)):
+            return int(obj)
+        elif isinstance(obj, (np.floating, np.float64)):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return obj
+
     with open(args.output, 'w') as f:
-        json.dump(all_metrics, f, indent=2)
+        json.dump(all_metrics, f, indent=2, default=convert_numpy)
     
     print(f"Metrics saved to {args.output}")
     print(f"\n=== SUMMARY ===")
