@@ -1,0 +1,29 @@
+{
+  "project_name": "crowley-capital-diligence",
+  "description": "VC Due Diligence Automation Tool for Crowley Capital",
+  "version": "0.1.0",
+  "author": "Jordaaan",
+  "partner": "Crowley Capital",
+  "location": "Austin, TX",
+  "skills_path": "./skills",
+  "data_path": "./data-room",
+  "commands": [
+    "/diligence init",
+    "/diligence analyze",
+    "/diligence risks",
+    "/diligence export",
+    "/diligence compare"
+  ],
+  "integrations": {
+    "egnyte": {
+      "mcp_url": "https://mcp-server.egnyte.com/mcp",
+      "purpose": "Secure data room access"
+    },
+    "pipeboard_meta": {
+      "purpose": "Meta Ads auditing"
+    },
+    "stape": {
+      "purpose": "Server-side tracking"
+    }
+  }
+}
