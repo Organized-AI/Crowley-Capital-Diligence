@@ -57,21 +57,47 @@ Place files in the appropriate directories:
 
 ## Skills
 
-- **saas-metrics**: LTV, CAC, NRR, churn, cohorts
-- **cap-table-modeling**: Dilution, waterfalls, round modeling
-- **risk-framework**: Tunguz 11-risks scoring
-- **data-room-templates**: Memos, dashboards, exports
-- **austin-market**: Regional context
+### Core Analysis
+| Skill | Purpose |
+|-------|---------|
+| **saas-metrics** | LTV, CAC, NRR, churn, cohort analysis |
+| **cap-table-modeling** | Dilution scenarios, waterfalls, round modeling |
+| **risk-framework** | Tunguz 11-risks scoring |
+| **business-fin-analyst** | P&L analysis, burn rate, financial modeling |
+
+### Data & Documents
+| Skill | Purpose |
+|-------|---------|
+| **data-room** | Egnyte integration for secure document access |
+| **data-room-templates** | Memos, dashboards, exports |
+| **contract-review** | Term sheets, agreements, legal diligence |
+
+### Context & Operations
+| Skill | Purpose |
+|-------|---------|
+| **austin-market** | Regional context, investors, valuations |
+| **data-audit** | Meta Ads auditing for portfolio companies |
+| **phased-planning** | Implementation roadmaps, Claude Code prompts |
+
+## Subagents
+
+| Agent | Purpose |
+|-------|---------|
+| **financial-analyst** | Deep-dive financial analysis |
+| **captable-modeler** | Cap table scenario modeling |
+| **metrics-engine** | SaaS metrics calculation engine |
+| **customer-analyzer** | Customer cohort and retention analysis |
+| **risk-assessor** | 11-risks framework evaluation |
 
 ## Implementation Phases
 
-| Phase | Description |
-|-------|-------------|
-| Phase 0 | Foundation Setup |
-| Phase 1 | Core Skills (Metrics, Cap Table) |
-| Phase 2 | Subagent Integration & Hooks |
-| Phase 3 | Risk Assessment & Outputs |
-| Phase 4 | Polish & Austin Context |
+| Phase | Description | Status |
+|-------|-------------|--------|
+| Phase 0 | Foundation Setup | Complete |
+| Phase 1 | Core Skills (Metrics, Cap Table) | Complete |
+| Phase 2 | Subagent Integration & Hooks | Complete |
+| Phase 3 | Risk Assessment & Outputs | Complete |
+| Phase 4 | Polish & Austin Context | Complete |
 
 ---
 

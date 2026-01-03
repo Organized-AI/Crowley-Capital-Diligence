@@ -1,0 +1,149 @@
+{
+  "round_terms": {
+    "round_name": "Series A",
+    "investment_amount": 5000000.0,
+    "pre_money_valuation": 20000000.0,
+    "post_money_valuation": 25000000.0,
+    "price_per_share": 2.0,
+    "new_shares_issued": 2500000,
+    "option_pool_increase": 0,
+    "liquidation_preference": 1.0,
+    "participating": false,
+    "participation_cap": 0.0,
+    "anti_dilution": "broad_weighted_average",
+    "pro_rata_rights": true
+  },
+  "new_investor_ownership": 20.0,
+  "option_pool_post": 12.0,
+  "dilution_impacts": [
+    {
+      "holder_name": "Founder A",
+      "holder_type": "founder",
+      "pre_round_shares": 4000000,
+      "pre_round_pct": 40.0,
+      "post_round_shares": 4000000,
+      "post_round_pct": 32.0,
+      "dilution_pct": 8.0
+    },
+    {
+      "holder_name": "Founder B",
+      "holder_type": "founder",
+      "pre_round_shares": 3000000,
+      "pre_round_pct": 30.0,
+      "post_round_shares": 3000000,
+      "post_round_pct": 24.0,
+      "dilution_pct": 6.0
+    },
+    {
+      "holder_name": "Employee Pool",
+      "holder_type": "pool",
+      "pre_round_shares": 1500000,
+      "pre_round_pct": 15.0,
+      "post_round_shares": 1500000,
+      "post_round_pct": 12.0,
+      "dilution_pct": 3.0
+    },
+    {
+      "holder_name": "Seed Investor 1",
+      "holder_type": "investor",
+      "pre_round_shares": 1000000,
+      "pre_round_pct": 10.0,
+      "post_round_shares": 1000000,
+      "post_round_pct": 8.0,
+      "dilution_pct": 2.0
+    },
+    {
+      "holder_name": "Seed Investor 2",
+      "holder_type": "investor",
+      "pre_round_shares": 500000,
+      "pre_round_pct": 5.0,
+      "post_round_shares": 500000,
+      "post_round_pct": 4.0,
+      "dilution_pct": 1.0
+    }
+  ],
+  "post_money_cap_table": {
+    "total_shares_outstanding": 12500000,
+    "fully_diluted_shares": 12500000,
+    "option_pool_shares": 1500000,
+    "option_pool_pct": 12.0,
+    "holders": [
+      {
+        "name": "Founder A",
+        "holder_type": "founder",
+        "share_class": "common",
+        "shares": 4000000,
+        "price_per_share": 0.0001,
+        "invested": 400.0,
+        "ownership_pct": 32.0,
+        "fully_diluted_pct": 32.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Founder B",
+        "holder_type": "founder",
+        "share_class": "common",
+        "shares": 3000000,
+        "price_per_share": 0.0001,
+        "invested": 300.0,
+        "ownership_pct": 24.0,
+        "fully_diluted_pct": 24.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Employee Pool",
+        "holder_type": "pool",
+        "share_class": "common",
+        "shares": 1500000,
+        "price_per_share": 0.0,
+        "invested": 0.0,
+        "ownership_pct": 12.0,
+        "fully_diluted_pct": 12.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Seed Investor 1",
+        "holder_type": "investor",
+        "share_class": "preferred_seed",
+        "shares": 1000000,
+        "price_per_share": 1.0,
+        "invested": 1000000.0,
+        "ownership_pct": 8.0,
+        "fully_diluted_pct": 8.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Seed Investor 2",
+        "holder_type": "investor",
+        "share_class": "preferred_seed",
+        "shares": 500000,
+        "price_per_share": 1.0,
+        "invested": 500000.0,
+        "ownership_pct": 4.0,
+        "fully_diluted_pct": 4.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Series A Investor",
+        "holder_type": "investor",
+        "share_class": "preferred_series_a",
+        "shares": 2500000,
+        "price_per_share": 2.0,
+        "invested": 5000000.0,
+        "ownership_pct": 20.0,
+        "fully_diluted_pct": 20.0
+      }
+    ]
+  },
+  "modeled_at": "2026-01-03T20:00:57.326552"
+}
