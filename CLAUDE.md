@@ -29,6 +29,7 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 │                          • data-room                            │
 │                          • contract-review                      │
 │                          • business-fin-analyst                 │
+│                          • carta-integration                    │
 │                          • phased-planning                      │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -43,7 +44,7 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | `skills/*/SKILL.md` | Skill documentation |
 | `PLANNING/*.md` | Implementation prompts |
 
-## Skills (10)
+## Skills (12)
 
 ### Core Analysis
 | Skill | Purpose |
@@ -59,6 +60,7 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | **data-room** | Egnyte integration for secure document access |
 | **data-room-templates** | Memos, dashboards, exports |
 | **contract-review** | Term sheets, agreements, legal diligence |
+| **carta-integration** | Real-time cap tables, fund performance, 409A valuations |
 
 ### Context & Operations
 | Skill | Purpose |
@@ -66,6 +68,7 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | **austin-market** | Regional context, investors, valuations |
 | **data-audit** | Meta Ads auditing for portfolio companies |
 | **phased-planning** | Implementation roadmaps, Claude Code prompts |
+| **github-repo-creator** | Repository management |
 
 ## Implementation Phases
 
@@ -90,13 +93,24 @@ data-room/
 └── output/        # Final deliverables
 ```
 
-## MCP Integrations
+## MCP & API Integrations
 
-| MCP Server | Purpose |
-|------------|---------|
-| **Egnyte** | Secure data room document access |
-| **Pipeboard Meta** | Portfolio company ad account auditing |
-| **Stape** | Server-side tracking assessment |
+| Integration | Purpose | Auth |
+|-------------|---------|------|
+| **Egnyte** | Secure data room document access | OAuth |
+| **Pipeboard Meta** | Portfolio company ad account auditing | OAuth |
+| **Stape** | Server-side tracking assessment | API Key |
+| **Carta** | Cap tables, fund performance, valuations | OAuth 2.0 |
+
+## Environment Variables
+
+```bash
+# Carta API (for carta-integration skill)
+CARTA_CLIENT_ID=your_client_id
+CARTA_CLIENT_SECRET=your_client_secret
+CARTA_FIRM_ID=your_firm_id
+CARTA_ENV=playground  # or production
+```
 
 ## Author
 
