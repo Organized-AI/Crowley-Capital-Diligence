@@ -1,0 +1,6 @@
+holder,holder_type,share_class,shares,price_per_share,invested,ownership_pct
+Founder A,founder,common,4000000,0.0001,400,40.0
+Founder B,founder,common,3000000,0.0001,300,30.0
+Employee Pool,pool,common,1500000,0,0,15.0
+Seed Investor 1,investor,preferred_seed,1000000,1.00,1000000,10.0
+Seed Investor 2,investor,preferred_seed,500000,1.00,500000,5.0

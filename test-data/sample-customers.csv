@@ -1,0 +1,6 @@
+customer_id,company_name,created_date,churned_date,status,segment,mrr
+cust_001,Acme Corp,2024-01-01,,active,enterprise,6000
+cust_002,Beta Inc,2024-01-01,,active,mid-market,3500
+cust_003,Gamma LLC,2024-02-01,,active,smb,2000
+cust_004,Delta Co,2024-03-01,,active,enterprise,4000
+cust_005,Epsilon Ltd,2024-01-15,2024-03-01,churned,smb,1500
