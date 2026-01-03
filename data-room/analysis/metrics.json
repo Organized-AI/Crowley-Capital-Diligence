@@ -1,0 +1,32 @@
+{
+  "mrr": 15500,
+  "arr": 186000,
+  "mrr_growth_mom": 47.62,
+  "arr_growth_yoy": 0,
+  "arpu": 3100.0,
+  "ltv": 0,
+  "ltv_dcf": 0,
+  "cac": 0,
+  "ltv_cac_ratio": 0,
+  "cac_payback_months": 0,
+  "gross_churn_rate": 2.0,
+  "net_churn_rate": -2.0,
+  "net_revenue_retention": 102.0,
+  "logo_retention": 95.0,
+  "gross_margin": 75.0,
+  "burn_rate": 0,
+  "runway_months": 18,
+  "burn_multiple": 1.5,
+  "quick_ratio": 4.0,
+  "top_customer_concentration": 15.0,
+  "top_10_concentration": 45.0,
+  "flags": [
+    {
+      "severity": "high",
+      "metric": "ltv_cac_ratio",
+      "message": "\ud83d\udd34 LTV:CAC below 2.0 - Unit economics challenged"
+    }
+  ],
+  "calculation_date": "2026-01-03T20:00:51.901134",
+  "data_period": "sample"
+}

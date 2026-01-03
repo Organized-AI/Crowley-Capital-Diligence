@@ -1,0 +1,119 @@
+{
+  "cap_table": {
+    "company_name": "Unknown",
+    "as_of_date": "2026-01-03",
+    "total_shares_authorized": 10000000,
+    "total_shares_outstanding": 10000000,
+    "fully_diluted_shares": 10000000,
+    "option_pool_shares": 1500000,
+    "option_pool_pct": 15.0,
+    "share_classes": [
+      {
+        "name": "common",
+        "share_type": "common",
+        "authorized": 0,
+        "issued": 8500000,
+        "outstanding": 8500000,
+        "price_per_share": 0.0,
+        "liquidation_preference": 1.0,
+        "participating": false,
+        "conversion_ratio": 1.0,
+        "seniority": 0
+      },
+      {
+        "name": "preferred_seed",
+        "share_type": "preferred",
+        "authorized": 0,
+        "issued": 1500000,
+        "outstanding": 1500000,
+        "price_per_share": 0.0,
+        "liquidation_preference": 1.0,
+        "participating": false,
+        "conversion_ratio": 1.0,
+        "seniority": 0
+      }
+    ],
+    "holders": [
+      {
+        "name": "Founder A",
+        "holder_type": "founder",
+        "share_class": "common",
+        "shares": 4000000,
+        "price_per_share": 0.0001,
+        "invested": 400.0,
+        "ownership_pct": 40.0,
+        "fully_diluted_pct": 40.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Founder B",
+        "holder_type": "founder",
+        "share_class": "common",
+        "shares": 3000000,
+        "price_per_share": 0.0001,
+        "invested": 300.0,
+        "ownership_pct": 30.0,
+        "fully_diluted_pct": 30.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Employee Pool",
+        "holder_type": "pool",
+        "share_class": "common",
+        "shares": 1500000,
+        "price_per_share": 0.0,
+        "invested": 0.0,
+        "ownership_pct": 15.0,
+        "fully_diluted_pct": 15.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Seed Investor 1",
+        "holder_type": "investor",
+        "share_class": "preferred_seed",
+        "shares": 1000000,
+        "price_per_share": 1.0,
+        "invested": 1000000.0,
+        "ownership_pct": 10.0,
+        "fully_diluted_pct": 10.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      },
+      {
+        "name": "Seed Investor 2",
+        "holder_type": "investor",
+        "share_class": "preferred_seed",
+        "shares": 500000,
+        "price_per_share": 1.0,
+        "invested": 500000.0,
+        "ownership_pct": 5.0,
+        "fully_diluted_pct": 5.0,
+        "vesting_start": null,
+        "vesting_end": null,
+        "vested_shares": 0
+      }
+    ]
+  },
+  "summary": {
+    "total_shares": 10000000,
+    "fully_diluted": 10000000,
+    "option_pool_pct": 15.0,
+    "share_class_count": 2,
+    "holder_count": 5,
+    "ownership_by_type": {
+      "founder": 70.0,
+      "pool": 15.0,
+      "investor": 15.0
+    },
+    "total_invested": 1500700.0,
+    "implied_valuation": 10000000.0
+  },
+  "parsed_at": "2026-01-03T20:00:23.618448"
+}
