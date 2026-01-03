@@ -17,7 +17,7 @@ Internal VC due diligence automation system for Crowley Capital. Uses Claude Cod
 
 | Component | Status |
 |-----------|--------|
-| Skills (8) | ✅ Defined |
+| Skills (10) | ✅ Defined |
 | Subagents (5) | ✅ Designed |
 | Hooks (4) | ✅ Designed |
 | Phase Prompts | ✅ Ready |
@@ -34,8 +34,10 @@ Internal VC due diligence automation system for Crowley Capital. Uses Claude Cod
 | data-room-templates | Memos, dashboards | ✅ SKILL.md |
 | austin-market | Regional context | ✅ SKILL.md |
 | data-audit | Meta Ads analysis | ✅ SKILL.md |
-| data-room | Egnyte integration | ✅ SKILL.md |
+| data-room | Egnyte integration | ✅ SKILL.md + references |
 | contract-review | Legal document review | ✅ SKILL.md + references |
+| business-fin-analyst | P&L, burn, financials | ✅ SKILL.md + scripts |
+| phased-planning | Implementation planning | ✅ SKILL.md |
 
 ### MCP Integrations
 
@@ -71,7 +73,9 @@ claude --dangerously-skip-permissions
 3. **Austin Market** focus — Crowley Capital's territory
 4. **Egnyte Integration** — Secure data room access
 5. **Contract Review** — Legal diligence automation
-6. **Phased Implementation** — Testable increments
+6. **Business Financial Analyst** — CSV/Excel processing
+7. **Phased Planning** — Structured implementation
+8. **Phased Implementation** — Testable increments
 
 ### Dependencies
 

@@ -19,15 +19,17 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 ┌─────────────────────────────────────────────────────────────────┐
 │                    CLAUDE CODE ORCHESTRATOR                     │
 ├─────────────────────────────────────────────────────────────────┤
-│   SUBAGENTS              SKILLS              HOOKS              │
-│   • financial-analyst    • saas-metrics      • on-file-upload   │
-│   • captable-modeler     • cap-table-model   • on-metric-thresh │
-│   • metrics-engine       • risk-framework    • on-analysis-done │
-│   • customer-analyzer    • data-room-templ   • on-export        │
+│   SUBAGENTS              SKILLS                 HOOKS           │
+│   • financial-analyst    • saas-metrics         • on-file-upload│
+│   • captable-modeler     • cap-table-modeling   • on-threshold  │
+│   • metrics-engine       • risk-framework       • on-complete   │
+│   • customer-analyzer    • data-room-templates  • on-export     │
 │   • risk-assessor        • austin-market                        │
 │                          • data-audit                           │
 │                          • data-room                            │
 │                          • contract-review                      │
+│                          • business-fin-analyst                 │
+│                          • phased-planning                      │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -41,18 +43,29 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | `skills/*/SKILL.md` | Skill documentation |
 | `PLANNING/*.md` | Implementation prompts |
 
-## Skills (8)
+## Skills (10)
 
+### Core Analysis
 | Skill | Purpose |
 |-------|---------|
 | **saas-metrics** | LTV, CAC, NRR, churn, cohorts |
 | **cap-table-modeling** | Dilution, waterfalls, rounds |
 | **risk-framework** | Tunguz 11-risks scoring |
-| **data-room-templates** | Memos, dashboards, exports |
-| **austin-market** | Regional context |
-| **data-audit** | Meta Ads auditing for portfolio companies |
+| **business-fin-analyst** | P&L analysis, burn rate, financial modeling |
+
+### Data & Documents
+| Skill | Purpose |
+|-------|---------|
 | **data-room** | Egnyte integration for secure document access |
+| **data-room-templates** | Memos, dashboards, exports |
 | **contract-review** | Term sheets, agreements, legal diligence |
+
+### Context & Operations
+| Skill | Purpose |
+|-------|---------|
+| **austin-market** | Regional context, investors, valuations |
+| **data-audit** | Meta Ads auditing for portfolio companies |
+| **phased-planning** | Implementation roadmaps, Claude Code prompts |
 
 ## Implementation Phases
 
