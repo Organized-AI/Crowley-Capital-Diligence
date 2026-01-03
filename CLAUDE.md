@@ -27,6 +27,7 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 │   • risk-assessor        • austin-market                        │
 │                          • data-audit                           │
 │                          • data-room                            │
+│                          • contract-review                      │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -38,17 +39,20 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | `QUICK-REFERENCE.md` | Commands and metrics cheat sheet |
 | `ARCHITECTURE/system-design.md` | Technical architecture |
 | `skills/*/SKILL.md` | Skill documentation |
-| `prompts/phase-*.md` | Implementation prompts |
+| `PLANNING/*.md` | Implementation prompts |
 
-## Skills (7)
+## Skills (8)
 
-1. **saas-metrics** — LTV, CAC, NRR, churn, cohorts
-2. **cap-table-modeling** — Dilution, waterfalls, rounds
-3. **risk-framework** — Tunguz 11-risks scoring
-4. **data-room-templates** — Memos, dashboards, exports
-5. **austin-market** — Regional context
-6. **data-audit** — Meta Ads auditing for portfolio companies
-7. **data-room** — Egnyte integration for secure document access
+| Skill | Purpose |
+|-------|---------|
+| **saas-metrics** | LTV, CAC, NRR, churn, cohorts |
+| **cap-table-modeling** | Dilution, waterfalls, rounds |
+| **risk-framework** | Tunguz 11-risks scoring |
+| **data-room-templates** | Memos, dashboards, exports |
+| **austin-market** | Regional context |
+| **data-audit** | Meta Ads auditing for portfolio companies |
+| **data-room** | Egnyte integration for secure document access |
+| **contract-review** | Term sheets, agreements, legal diligence |
 
 ## Implementation Phases
 
@@ -72,6 +76,14 @@ data-room/
 ├── analysis/      # Generated analysis
 └── output/        # Final deliverables
 ```
+
+## MCP Integrations
+
+| MCP Server | Purpose |
+|------------|---------|
+| **Egnyte** | Secure data room document access |
+| **Pipeboard Meta** | Portfolio company ad account auditing |
+| **Stape** | Server-side tracking assessment |
 
 ## Author
 

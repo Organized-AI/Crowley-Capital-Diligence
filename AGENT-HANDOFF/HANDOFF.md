@@ -17,7 +17,7 @@ Internal VC due diligence automation system for Crowley Capital. Uses Claude Cod
 
 | Component | Status |
 |-----------|--------|
-| Skills (7) | ✅ Defined |
+| Skills (8) | ✅ Defined |
 | Subagents (5) | ✅ Designed |
 | Hooks (4) | ✅ Designed |
 | Phase Prompts | ✅ Ready |
@@ -35,6 +35,15 @@ Internal VC due diligence automation system for Crowley Capital. Uses Claude Cod
 | austin-market | Regional context | ✅ SKILL.md |
 | data-audit | Meta Ads analysis | ✅ SKILL.md |
 | data-room | Egnyte integration | ✅ SKILL.md |
+| contract-review | Legal document review | ✅ SKILL.md + references |
+
+### MCP Integrations
+
+| MCP | Purpose | Status |
+|-----|---------|--------|
+| Egnyte | Data room access | Ready to connect |
+| Pipeboard Meta | Ad account auditing | Ready to connect |
+| Stape | CAPI assessment | Ready to connect |
 
 ### Next Steps
 
@@ -52,7 +61,7 @@ cd "/Users/supabowl/Library/Mobile Documents/com~apple~CloudDocs/BHT Promo iClou
 
 # Open phase prompt and run
 claude --dangerously-skip-permissions
-# Paste contents of prompts/phase-X.md
+# Paste contents of PLANNING/phase-X.md
 ```
 
 ### Key Decisions Made
@@ -61,7 +70,8 @@ claude --dangerously-skip-permissions
 2. **Tunguz 11-Risks** framework — Industry standard
 3. **Austin Market** focus — Crowley Capital's territory
 4. **Egnyte Integration** — Secure data room access
-5. **Phased Implementation** — Testable increments
+5. **Contract Review** — Legal diligence automation
+6. **Phased Implementation** — Testable increments
 
 ### Dependencies
 
