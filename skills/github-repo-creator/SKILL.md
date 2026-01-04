@@ -1,83 +1,65 @@
 ---
 name: github-repo-creator
-description: Create GitHub repositories directly from CLI without visiting github.com. Use when user wants to create a new repo, initialize a project on GitHub, set up a new repository, or push a new project to GitHub. Triggers include "create repo", "new repository", "set up GitHub repo", "initialize GitHub project", "make a repo", or any request to create/setup a GitHub repository.
+description: Creates GitHub repositories via CLI using gh tool. Handles org/personal repos, visibility settings, and initial setup. Use when creating new repos, initializing projects on GitHub, or pushing new projects. Triggers on "create repo", "new repository", "set up GitHub repo", "make a repo".
 ---
 
 # GitHub Repository Creator
 
-Create and configure GitHub repositories via CLI using the `gh` GitHub CLI tool.
+## Workflow
 
-## Prerequisites Check
-
-1. Identify which machine is being used:
-   - `users/supabowl` = MacBook M1 Pro
-   - `users/jordaaan` = M4 Mac Mini
-
-2. Verify `gh` CLI installation and authentication:
-```bash
-gh --version && gh auth status
+Copy this checklist:
+```
+Repo Creation:
+- [ ] Step 1: Verify gh CLI installed (gh auth status)
+- [ ] Step 2: Gather requirements (name, org, visibility)
+- [ ] Step 3: Create repository
+- [ ] Step 4: Clone to project directory
+- [ ] Step 5: Initialize with structure
 ```
 
-If not installed: `brew install gh && gh auth login`
-
-## Repository Creation Workflow
-
-### Step 1: Gather Requirements
-
-Ask user for:
-- **Repository name** (kebab-case recommended)
-- **Organization**: Personal (`jhillbht`) or Organization (`organized-ai`)
-- **Visibility**: Public or Private (default: public)
-
-### Step 2: Create Repository
+## Quick Commands
 
 ```bash
-# For organization repo
-gh repo create organized-ai/<repo-name> --public --description "<description>"
+# Check auth
+gh auth status
 
-# For personal repo
-gh repo create jhillbht/<repo-name> --public --description "<description>"
-```
+# Create org repo
+gh repo create organized-ai/<name> --public --description "desc"
 
-**Common flags:**
-- `--public` / `--private` - visibility
-- `--description "text"` - repo description
-- `--license mit` - add license
-- `--gitignore Node` - add .gitignore template
+# Create personal repo
+gh repo create jhillbht/<name> --public
 
-### Step 3: Clone to Default Directory
-
-Clone to the standard project location:
-
-```bash
-cd "/Users/supabowl/Library/Mobile Documents/com~apple~CloudDocs/BHT Promo iCloud/Organized AI/Windsurf"
-gh repo clone <org>/<repo-name>
-```
-
-### Step 4: Offer Next Steps
-
-After creation, offer to:
-1. Initialize with README, .gitignore, starter structure
-2. Apply Organized Codebase template (use organized-codebase-applicator skill)
-3. Open in Cursor/VS Code
-
-## Quick Reference Commands
-
-```bash
-# Create + clone in one step (from existing local project)
+# Create from existing local project
 gh repo create <name> --source=. --public --push
 
-# List repos in org
+# Clone to standard location
+cd "/path/to/projects" && gh repo clone <org>/<name>
+
+# List repos / view in browser / delete
 gh repo list organized-ai
-
-# View repo in browser
 gh repo view <repo> --web
-
-# Delete repo (use with caution)
 gh repo delete <org>/<repo> --yes
 ```
 
-## GitHub Accounts Reference
+## Common Flags
 
-- **Personal**: `https://github.com/jhillbht`
-- **Organization**: `https://github.com/organized-ai`
+| Flag | Purpose |
+|------|---------|
+| `--public` / `--private` | Visibility |
+| `--description "text"` | Description |
+| `--license mit` | Add license |
+| `--gitignore Node` | Add .gitignore |
+
+## Accounts
+
+| Type | URL |
+|------|-----|
+| Personal | github.com/jhillbht |
+| Organization | github.com/organized-ai |
+
+## Post-Creation
+
+Offer to:
+1. Initialize with README/.gitignore
+2. Apply organized-codebase-applicator template
+3. Open in editor

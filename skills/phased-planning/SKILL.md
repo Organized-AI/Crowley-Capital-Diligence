@@ -1,26 +1,23 @@
 ---
 name: phased-planning
-description: Creates structured implementation plans with phase prompts for Claude Code execution. Use when building complex projects, creating implementation roadmaps, breaking work into phases, or generating Claude Code prompts for multi-step development. Triggers include "create implementation plan", "phase this project", "create phases for", "plan the build", "phased implementation", "break this into phases".
+description: Creates structured implementation plans with Claude Code-ready phase prompts. Generates master plans, phase prompts with success criteria, and completion templates. Use when building complex projects, creating roadmaps, or breaking work into executable phases. Triggers on "create implementation plan", "phase this project", "break into phases".
 ---
 
 # Phased Planning Skill
 
-Creates comprehensive phased implementation plans that generate copy-paste ready prompts for Claude Code execution, with success criteria and completion templates for each phase.
-
-## Triggers
-
-- "create implementation plan"
-- "phase this project"
-- "create phases for"
-- "plan the build"
-- "phased implementation"
-- "create Claude Code prompts"
-- "break this into phases"
-- "implementation roadmap"
-
----
-
 ## Workflow
+
+Copy this checklist:
+```
+Planning Progress:
+- [ ] Step 1: Analyze project components and dependencies
+- [ ] Step 2: Create IMPLEMENTATION-MASTER-PLAN.md
+- [ ] Step 3: Write individual PHASE-X-PROMPT.md files
+- [ ] Step 4: Create CLAUDE-CODE-PHASE-0.md quick-start
+- [ ] Step 5: Verify phase dependencies are correct
+```
+
+## Phase Structure
 
 ### Phase 1: Project Analysis
 

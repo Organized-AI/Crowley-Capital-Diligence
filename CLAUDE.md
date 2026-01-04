@@ -32,6 +32,8 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 │                          • business-fin-analyst                 │
 │                          • carta-integration                    │
 │                          • diligence-report                     │
+│                          • pdf-report-generator                 │
+│                          • investor-matcher                     │
 │                          • phased-planning                      │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -46,7 +48,7 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | `skills/*/SKILL.md` | Skill documentation |
 | `PLANNING/*.md` | Implementation prompts |
 
-## Skills (13)
+## Skills (16)
 
 ### Core Analysis
 | Skill | Purpose |
@@ -55,6 +57,7 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | **cap-table-modeling** | Dilution, waterfalls, rounds |
 | **risk-framework** | Tunguz 11-risks scoring |
 | **business-fin-analyst** | P&L analysis, burn rate, financial modeling |
+| **investor-matcher** | Match startups to investors (40/40/20 algorithm) |
 
 ### Data & Documents
 | Skill | Purpose |
@@ -63,7 +66,12 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | **data-room-templates** | Memos, dashboards, exports |
 | **contract-review** | Term sheets, agreements, legal diligence |
 | **carta-integration** | Real-time cap tables, fund performance, 409A valuations |
-| **diligence-report** | PDF report generation with Mermaid visualizations |
+
+### Report Generation
+| Skill | Purpose |
+|-------|---------|
+| **diligence-report** | Compile analysis into PDF with Mermaid charts |
+| **pdf-report-generator** | ReportLab-based PDF creation with branded styling |
 
 ### Context & Operations
 | Skill | Purpose |
@@ -72,42 +80,32 @@ Internal VC due diligence automation system for Crowley Capital. Transforms star
 | **data-audit** | Meta Ads auditing for portfolio companies |
 | **phased-planning** | Implementation roadmaps, Claude Code prompts |
 | **github-repo-creator** | Repository management |
+| **organized-codebase-applicator** | Project structure templates |
 
 ## Report Generation
 
-The diligence-report skill compiles all analysis into executive-ready PDFs:
+### PDF Report Generator
+Professional PDF reports using ReportLab with:
+- **Metric dashboards** — Color-coded KPI boxes
+- **Risk scorecards** — Visual bar indicators
+- **Tiered sections** — Priority-coded headers
+- **Data tables** — Alternating rows, styled headers
+- **Branded styling** — Crowley Capital colors
 
+```python
+from pdf_report_generator import InvestmentAssessmentReport
+
+report = InvestmentAssessmentReport("Company Name", data, "output.pdf")
+report.generate()
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    DILIGENCE REPORT                              │
-├─────────────────────────────────────────────────────────────────┤
-│  1. Executive Summary        Key metrics + recommendation       │
-│  2. Financial Metrics        Revenue, unit economics, burn      │
-│  3. Cap Table Analysis       Ownership, rounds, waterfall       │
-│  4. Risk Assessment          11-Risks scorecard                 │
-│  5. Market Context           Austin ecosystem, comparables      │
-│  6. Appendix                 Full data tables                   │
-└─────────────────────────────────────────────────────────────────┘
-```
 
-### Mermaid Chart Integration
-
-Visual charts are generated via Mermaid Chart MCP:
-- Ownership pie charts
-- Revenue trend lines
-- Risk radar diagrams
-- Funding flow visualizations
-- Unit economics flows
-
-## Implementation Phases
-
-| Phase | Focus |
-|-------|-------|
-| 0 | Foundation Setup |
-| 1 | Core Skills (Metrics, Cap Table) |
-| 2 | Subagent Integration & Hooks |
-| 3 | Risk Assessment & Outputs |
-| 4 | Polish & Austin Context |
+### Report Types
+| Type | Pages | Use Case |
+|------|-------|----------|
+| Investment Assessment | 2-3 | IC review, deal evaluation |
+| Investor Matches | 3 | Fundraising strategy |
+| Diligence Summary | 8-10 | Full analysis compilation |
+| LP Report | 4-5 | Portfolio updates |
 
 ## Data Room Structure
 
@@ -121,12 +119,13 @@ data-room/
 ├── analysis/      # Generated analysis
 │   ├── metrics.json
 │   ├── parsed_captable.json
-│   └── cohorts.xlsx
+│   ├── {company}/investment-assessment.md
+│   └── {company}/investor-matches.md
 └── output/        # Final deliverables
     ├── investment-memo.md
     ├── risk-scorecard.md
-    ├── metrics-dashboard.html
-    └── diligence-report.pdf
+    ├── diligence-report.pdf
+    └── investor-matches.pdf
 ```
 
 ## MCP & API Integrations
@@ -147,6 +146,17 @@ CARTA_CLIENT_ID=your_client_id
 CARTA_CLIENT_SECRET=your_client_secret
 CARTA_FIRM_ID=your_firm_id
 CARTA_ENV=playground  # or production
+```
+
+## Brand Colors
+
+```python
+NAVY = '#1a365d'      # Headers, primary
+GOLD = '#d69e2e'      # Accents, warnings
+GREEN = '#38a169'     # Positive indicators
+RED = '#e53e3e'       # Negative, high risk
+GRAY = '#718096'      # Secondary text
+LIGHT_GRAY = '#f7fafc' # Backgrounds
 ```
 
 ## Author

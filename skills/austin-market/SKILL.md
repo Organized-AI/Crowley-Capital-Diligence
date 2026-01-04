@@ -1,55 +1,53 @@
 ---
 name: austin-market
-description: Austin, Texas startup ecosystem context for Crowley Capital deal evaluation. Use when assessing Austin-based startups, comparing regional valuations, identifying local co-investors, or evaluating exit potential in Texas. Triggers on "Austin startup", "Texas ecosystem", "local investors", "Austin valuations".
+description: Provides Austin, Texas startup ecosystem context for Crowley Capital deal evaluation. Includes valuation benchmarks, local co-investors, and acquirer landscape. Use when assessing Austin-based startups, comparing regional valuations, or evaluating Texas exit potential. Triggers on "Austin startup", "Texas ecosystem", "local investors", "Austin valuations", "Texas VC".
 ---
 
 # Austin Market Context Skill
 
 Regional intelligence for Crowley Capital's Austin-focused investing.
 
-## Austin Valuation Benchmarks
+## Valuation Benchmarks
 
-Austin valuations typically run 20-30% below Bay Area:
+Austin valuations typically run 20-30% below Bay Area for similar metrics:
 
-| Stage | Austin Range | Bay Area Comparable |
-|-------|-------------|---------------------|
-| Seed | $8-15M pre | $12-20M pre |
-| Series A | $20-40M pre | $30-60M pre |
-| Series B | $60-120M pre | $80-180M pre |
+| Stage | Austin Range | Bay Area |
+|-------|-------------|----------|
+| Seed | $8-15M pre | $12-20M |
+| Series A | $20-40M pre | $30-60M |
+| Series B | $60-120M pre | $80-180M |
 
-## Sectors Commanding Premium
+**No discount** for: Enterprise SaaS, Fintech, Cybersecurity, E-commerce/D2C
 
-No Austin discount for:
-- Enterprise SaaS
-- Fintech/Payments
-- E-commerce/D2C
-- Cybersecurity
+## Co-Investor Landscape
 
-## Local Investors
+| Investor | Stage | Check Size |
+|----------|-------|------------|
+| LiveOak Venture Partners | Seed-A | $2-10M |
+| S3 Ventures | Seed-B | $1-15M |
+| Next Coast Ventures | Seed-A | $3-15M |
+| ATX Venture Partners | Seed | $500K-$5M |
+| Capital Factory | Pre-Seed | $100K-$1M |
 
-### Seed/Series A
-- LiveOak Venture Partners ($2-10M)
-- S3 Ventures ($1-15M)
-- Capital Factory ($100K-$1M)
-- Next Coast Ventures ($3-15M)
-- ATX Venture Partners ($500K-$5M)
+**Growth**: Vista Equity Partners, Thoma Bravo (both Austin HQ)
 
-### Growth
-- Vista Equity Partners
-- Thoma Bravo
+## Exit Landscape
 
-## Local Acquirers
-
-| Company | Focus | Activity |
-|---------|-------|----------|
-| Dell Technologies | Enterprise, Security | Active |
-| Oracle | Cloud, SaaS | Moderate |
+| Acquirer | Focus | Deal Flow |
+|----------|-------|-----------|
 | Vista Equity | Enterprise Software | Very Active |
 | Thoma Bravo | Software, Security | Very Active |
+| Dell Technologies | Enterprise, Security | Active |
+| Oracle | Cloud, SaaS | Moderate |
 
-## Austin Advantages
+## Austin Operating Advantages
 
 - No state income tax
-- 30-40% lower operating costs
-- Strong enterprise sales talent (Dell/IBM legacy)
-- Quality of life for recruiting
+- 30-40% lower operating costs vs. Bay Area
+- Strong enterprise sales talent pool (Dell/IBM alumni)
+- Growing tech workforce migration
+
+## References
+
+- [references/austin-investors.md](references/austin-investors.md) — Full investor directory
+- [references/austin-exits.md](references/austin-exits.md) — Recent exit data

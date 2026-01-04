@@ -1,51 +1,52 @@
 ---
 name: cap-table-modeling
-description: Model cap tables, dilution scenarios, and exit waterfalls for venture capital due diligence. Use when analyzing startup ownership structures, modeling investment rounds, calculating founder/investor dilution, building exit scenario analyses, or understanding liquidation preferences. Triggers on "cap table", "dilution", "ownership", "waterfall analysis", "liquidation preference", "option pool".
+description: Models cap tables, dilution scenarios, and exit waterfalls for VC due diligence. Use when analyzing ownership structures, modeling investment rounds, calculating dilution, building waterfall analyses, or reviewing liquidation preferences. Triggers on "cap table", "dilution", "ownership", "waterfall", "liquidation preference", "option pool".
 ---
 
 # Cap Table Modeling Skill
 
-Model ownership structures, dilution scenarios, and exit waterfalls.
+## Workflow
 
-## Key Concepts
+Copy this checklist:
+```
+Cap Table Analysis:
+- [ ] Step 1: Parse cap table (run parse_captable.py)
+- [ ] Step 2: Validate share counts match totals
+- [ ] Step 3: Model proposed round (run model_round.py)
+- [ ] Step 4: Build exit waterfall (run waterfall_analysis.py)
+- [ ] Step 5: Check red flags and document findings
+```
 
-| Term | Definition |
-|------|------------|
-| Pre-money | Company valuation before new investment |
-| Post-money | Pre-money + new investment amount |
-| Dilution | Reduction in ownership % from new shares |
-| Option Pool | Shares reserved for employee equity |
-| Liquidation Preference | Amount investors get paid first in exit |
+**Validation (Step 2)**: Sum all share classes. If total differs from stated fully-diluted count by >0.5%, flag data quality issue.
 
-## Standard Round Terms
+## Quick Reference
 
-| Term | Founder-Friendly | Standard | Investor-Favorable |
-|------|------------------|----------|-------------------|
-| Liquidation Pref | 1x non-participating | 1x participating (capped) | >1x participating |
-| Option Pool | Post-money | Pre-money (15-20%) | Pre-money (>20%) |
-
-## Typical Dilution by Stage
-
-| Stage | Typical Dilution |
-|-------|-----------------|
-| Seed | 15-25% |
-| Series A | 20-30% |
-| Series B | 15-25% |
-| Series C+ | 10-20% |
-
-## Scripts
-
-| Script | Purpose |
-|--------|---------|
-| `parse_captable.py` | Parse Carta/CSV exports |
-| `model_round.py` | Model new investment round |
-| `waterfall_analysis.py` | Build exit waterfall |
+| Stage | Typical Dilution | Option Pool | Founder Target |
+|-------|-----------------|-------------|----------------|
+| Seed | 15-25% | 10-15% | >60% |
+| Series A | 20-30% | 15-20% | >40% |
+| Series B | 15-25% | 15-20% | >25% |
+| Series C+ | 10-20% | 10-15% | >15% |
 
 ## Red Flags
 
-| Red Flag | Why It Matters |
-|----------|---------------|
-| >2x liquidation preference | Returns to common severely impacted |
-| Full ratchet anti-dilution | Founders crushed in down-round |
-| >25% option pool pre-money | Excessive dilution to founders |
-| Founder ownership <10% pre-Series B | May lack motivation |
+| Flag | Threshold | Action |
+|------|-----------|--------|
+| Liquidation preference | >1.5x | Model downside scenarios |
+| Participating preferred | Uncapped | Calculate break-even exit |
+| Option pool shuffle | >25% pre-money | Flag in memo |
+| Founder dilution | <10% pre-B | Assess motivation risk |
+| Full ratchet anti-dilution | Any | Model down-round impact |
+
+## Scripts
+
+| Script | Input | Output |
+|--------|-------|--------|
+| `parse_captable.py` | Carta/CSV export | `parsed_captable.json` |
+| `model_round.py` | Round terms + cap table | Dilution analysis |
+| `waterfall_analysis.py` | Cap table + exit values | Payout scenarios |
+
+## References
+
+- [references/term-sheets.md](references/term-sheets.md) — Standard vs. aggressive terms
+- [references/waterfall-examples.md](references/waterfall-examples.md) — Sample exit calculations
